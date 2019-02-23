@@ -1,4 +1,4 @@
-# DisplayPort_Verlilog
+# DisplayPort_Verilog
 
 A open Verilog implementation of DisplayPort protocol for FPGAs
 
