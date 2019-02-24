@@ -121,7 +121,7 @@ wire        ignore_PMARSVDOUT0;
 wire        ignore_PMARSVDOUT1;
 wire  [2:0] ignore_RXBUFSTATUS;
 wire        ignore_RXDLYSRESETDONE;
-wire ignore_RXPHALIGNDONE;
+wire        ignore_RXPHALIGNDONE;
 wire  [4:0] ignore_RXPHMONITOR;
 wire  [4:0] ignore_RXPHSLIPMONITOR;
 wire  [2:0] ignore_RXSTATUS;
