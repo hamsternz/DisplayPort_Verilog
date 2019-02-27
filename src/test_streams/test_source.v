@@ -57,10 +57,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 module test_source(
-    input         clk,
-    output  [2:0] stream_channel_count,
-    output        ready,
-    output [72:0] data
+    input             clk,
+    output      [2:0] stream_channel_count,
+    output            ready,
+    output reg [72:0] data
 );
 
     wire [23:0] M_value;
@@ -85,6 +85,17 @@ module test_source(
     wire  [4:0] bits_per_colour;
 
     wire [72:0] raw_data;
+    wire [72:0] data_ch_1;
+    wire [72:0] data_ch_2;
+    wire [72:0] data_ch_4;
+
+always @(*) begin
+    case(stream_channel_count)
+        3'b100:  data <= data_ch_4;
+        3'b010:  data <= data_ch_2;
+        default: data <= data_ch_1;
+    endcase
+end
 
 test_source_800_600_RGB_444_colourbar i_test_source(
             .M_value              (M_value),
@@ -152,7 +163,85 @@ insert_main_stream_attrbutes_one_channel i_insert_main_stream_attrbutes_one_chan
             //////////////////////////////////////////////////////
             // The stream of pixel data going out
             //////////////////////////////////////////////////////
-            .out_data             (data)
+            .out_data             (data_ch_1)
+        );
+
+insert_main_stream_attrbutes_two_channels i_insert_main_stream_attrbutes_two_channels(
+            .clk                  (clk),
+            .active               (1'b1),
+            //////////////////////////////////////////////////////
+            // The MSA values (some are range reduced and could 
+            // be 16 bits ins size)
+            //////////////////////////////////////////////////////     
+            .M_value              (M_value),
+            .N_value              (N_value),
+
+            .H_visible            (H_visible),
+            .H_total              (H_total),
+            .H_sync_width         (H_sync_width),
+            .H_start              (H_start),    
+     
+            .V_visible            (V_visible),
+            .V_total              (V_total),
+            .V_sync_width         (V_sync_width),
+            .V_start              (V_start),
+            .H_vsync_active_high  (H_vsync_active_high),
+            .V_vsync_active_high  (V_vsync_active_high),
+            .flag_sync_clock      (flag_sync_clock),
+            .flag_YCCnRGB         (flag_YCCnRGB),
+            .flag_422n444         (flag_422n444),
+            .flag_range_reduced   (flag_range_reduced),
+            .flag_interlaced_even (flag_interlaced_even),
+            .flag_YCC_colour_709  (flag_YCC_colour_709),
+            .flags_3d_Indicators  (flags_3d_Indicators),
+            .bits_per_colour      (bits_per_colour), 
+            //////////////////////////////////////////////////////
+            // The stream of pixel data coming in
+            //////////////////////////////////////////////////////
+            .in_data              (raw_data),
+            //////////////////////////////////////////////////////
+            // The stream of pixel data going out
+            //////////////////////////////////////////////////////
+            .out_data             (data_ch_2)
+        );
+
+insert_main_stream_attrbutes_four_channels i_insert_main_stream_attrbutes_four_channels(
+            .clk                  (clk),
+            .active               (1'b1),
+            //////////////////////////////////////////////////////
+            // The MSA values (some are range reduced and could 
+            // be 16 bits ins size)
+            //////////////////////////////////////////////////////     
+            .M_value              (M_value),
+            .N_value              (N_value),
+
+            .H_visible            (H_visible),
+            .H_total              (H_total),
+            .H_sync_width         (H_sync_width),
+            .H_start              (H_start),    
+     
+            .V_visible            (V_visible),
+            .V_total              (V_total),
+            .V_sync_width         (V_sync_width),
+            .V_start              (V_start),
+            .H_vsync_active_high  (H_vsync_active_high),
+            .V_vsync_active_high  (V_vsync_active_high),
+            .flag_sync_clock      (flag_sync_clock),
+            .flag_YCCnRGB         (flag_YCCnRGB),
+            .flag_422n444         (flag_422n444),
+            .flag_range_reduced   (flag_range_reduced),
+            .flag_interlaced_even (flag_interlaced_even),
+            .flag_YCC_colour_709  (flag_YCC_colour_709),
+            .flags_3d_Indicators  (flags_3d_Indicators),
+            .bits_per_colour      (bits_per_colour), 
+            //////////////////////////////////////////////////////
+            // The stream of pixel data coming in
+            //////////////////////////////////////////////////////
+            .in_data              (raw_data),
+            //////////////////////////////////////////////////////
+            // The stream of pixel data going out
+            //////////////////////////////////////////////////////
+            .out_data             (data_ch_4)
         );
 
 endmodule
