@@ -223,6 +223,67 @@ always @(posedge clk) begin
        12'h186: begin aux_tx_data <= 8'h06; aux_tx_wr_en <= 1'b1; end
        12'h187: begin aux_tx_data <= 8'h06; aux_tx_wr_en <= 1'b1; end
 
+	   	   // Set Premp level 1, votage 0.4V
+       12'h240: begin aux_tx_data <= 8'h80; aux_tx_wr_en <= 1'b1; end
+       12'h241: begin aux_tx_data <= 8'h01; aux_tx_wr_en <= 1'b1; end
+       12'h242: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h243: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h244: begin aux_tx_data <= 8'h10; aux_tx_wr_en <= 1'b1; end
+       12'h245: begin aux_tx_data <= 8'h10; aux_tx_wr_en <= 1'b1; end
+       12'h246: begin aux_tx_data <= 8'h10; aux_tx_wr_en <= 1'b1; end
+       12'h247: begin aux_tx_data <= 8'h10; aux_tx_wr_en <= 1'b1; end
+
+       // Set Premp level 1, votage 0.6V
+       12'h260: begin aux_tx_data <= 8'h80; aux_tx_wr_en <= 1'b1; end
+       12'h261: begin aux_tx_data <= 8'h01; aux_tx_wr_en <= 1'b1; end
+       12'h262: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h263: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h264: begin aux_tx_data <= 8'h11; aux_tx_wr_en <= 1'b1; end
+       12'h265: begin aux_tx_data <= 8'h11; aux_tx_wr_en <= 1'b1; end
+       12'h266: begin aux_tx_data <= 8'h11; aux_tx_wr_en <= 1'b1; end
+       12'h267: begin aux_tx_data <= 8'h11; aux_tx_wr_en <= 1'b1; end
+
+       // Set Premp level 1, votage 0.8V  -- Max voltage
+       12'h280: begin aux_tx_data <= 8'h80; aux_tx_wr_en <= 1'b1; end
+       12'h281: begin aux_tx_data <= 8'h01; aux_tx_wr_en <= 1'b1; end
+       12'h282: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h283: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h284: begin aux_tx_data <= 8'h16; aux_tx_wr_en <= 1'b1; end
+       12'h285: begin aux_tx_data <= 8'h16; aux_tx_wr_en <= 1'b1; end
+       12'h286: begin aux_tx_data <= 8'h16; aux_tx_wr_en <= 1'b1; end
+       12'h287: begin aux_tx_data <= 8'h16; aux_tx_wr_en <= 1'b1; end
+	   
+		// Set Premp level 2, votage 0.4V	-- Max pre-emphasis
+       12'h340: begin aux_tx_data <= 8'h80; aux_tx_wr_en <= 1'b1; end
+       12'h341: begin aux_tx_data <= 8'h01; aux_tx_wr_en <= 1'b1; end
+       12'h342: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h343: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h344: begin aux_tx_data <= 8'h60; aux_tx_wr_en <= 1'b1; end
+       12'h345: begin aux_tx_data <= 8'h60; aux_tx_wr_en <= 1'b1; end
+       12'h346: begin aux_tx_data <= 8'h60; aux_tx_wr_en <= 1'b1; end
+       12'h347: begin aux_tx_data <= 8'h60; aux_tx_wr_en <= 1'b1; end
+
+       // Set Premp level 2, votage 0.6V
+       12'h360: begin aux_tx_data <= 8'h80; aux_tx_wr_en <= 1'b1; end
+       12'h361: begin aux_tx_data <= 8'h01; aux_tx_wr_en <= 1'b1; end
+       12'h362: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h363: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h364: begin aux_tx_data <= 8'h61; aux_tx_wr_en <= 1'b1; end
+       12'h365: begin aux_tx_data <= 8'h61; aux_tx_wr_en <= 1'b1; end
+       12'h366: begin aux_tx_data <= 8'h61; aux_tx_wr_en <= 1'b1; end
+       12'h367: begin aux_tx_data <= 8'h61; aux_tx_wr_en <= 1'b1; end
+
+       // Set Premp level 2, votage 0.8V  -- Max voltage   -- Max pre-emphasis   
+	   // this condition should not be reached for the standard do not allow this pair
+       12'h380: begin aux_tx_data <= 8'h80; aux_tx_wr_en <= 1'b1; end
+       12'h381: begin aux_tx_data <= 8'h01; aux_tx_wr_en <= 1'b1; end
+       12'h382: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h383: begin aux_tx_data <= 8'h03; aux_tx_wr_en <= 1'b1; end
+       12'h384: begin aux_tx_data <= 8'h66; aux_tx_wr_en <= 1'b1; end
+       12'h385: begin aux_tx_data <= 8'h66; aux_tx_wr_en <= 1'b1; end
+       12'h386: begin aux_tx_data <= 8'h66; aux_tx_wr_en <= 1'b1; end
+       12'h387: begin aux_tx_data <= 8'h66; aux_tx_wr_en <= 1'b1; end
+
        default: begin aux_tx_data <= 8'h00; aux_tx_wr_en <= 1'b0; end
     endcase
 
