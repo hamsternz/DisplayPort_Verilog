@@ -59,15 +59,34 @@
 module tb_test_source;
 
     reg clk = 1'b0;
+    reg [8:0] ch1;
+    reg [8:0] ch2;
+    reg [8:0] ch3;
+    reg [8:0] ch4;
 
-
+        wire  [2:0] stream_channel_count;
+        wire [72:0] data;
+        wire        ready;
+        
+        
 initial begin
-        forever #4 clk = ~clk; // generate a clock
+        forever begin
+             #4 
+             clk = 1'b0; // generate a clock
+             ch1 <= data[8:0];
+             ch2 <= data[26:18];
+             ch3 <= data[44:36];
+             ch4 <= data[62:54];
+
+             #4 
+             clk = 1'b1; // generate a clock
+             ch1 <= data[17:9];
+             ch2 <= data[35:27];
+             ch3 <= data[53:45];
+             ch4 <= data[71:63];
+         end
     end     
 
-    wire  [2:0] stream_channel_count;
-    wire [72:0] raw_data;
-    wire        ready;
 
 test_source i_test_source(
     .clk                  (clk),

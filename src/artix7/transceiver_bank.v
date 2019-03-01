@@ -56,7 +56,7 @@
 //  Commercial use  - A weeks pay for an engineer (I wish!)
 //
 ///////////////////////////////////////////////////////////////////////////////
-module Transceiver_bank(
+module transceiver_bank(
     input         mgmt_clk,
     input   [1:0] powerup_channel,
 

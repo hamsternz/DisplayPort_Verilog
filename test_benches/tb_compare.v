@@ -81,7 +81,7 @@ test_source i_test_source(
     .data                 (data)
 );
 
-v_test_source i_v_test_source(
+test_source_cmp i_v_test_source_cmp(
     .clk                  (clk),
     .stream_channel_count (v_stream_channel_count),
     .ready                (v_ready),

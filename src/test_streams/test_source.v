@@ -97,7 +97,8 @@ always @(*) begin
     endcase
 end
 
-test_source_800_600_RGB_444_colourbar i_test_source(
+//test_source_800_600_RGB_444_colourbar i_test_source(
+test_source_800_600_RGB_444_ch2 i_test_source(
             .M_value              (M_value),
             .N_value              (N_value),
             

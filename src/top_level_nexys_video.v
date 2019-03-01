@@ -205,7 +205,7 @@ main_stream_processing i_main_stream_processing(
 ////////////////////////////////////////////////
 // Transceivers 
 ///////////////////////////////////////////////
-Transceiver_bank i_transciever_bank(
+transceiver_bank i_transciever_bank(
     .mgmt_clk        (clk100),
 
     ///////////////////////////////
