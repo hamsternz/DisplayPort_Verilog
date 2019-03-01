@@ -138,6 +138,8 @@ always @(*) begin
     end
 
 always @(posedge clk) begin
+    out_data[72] <= in_data[72];
+
     // channel One
     case(count)
      // 4'b0000: // while waiting for BS symbol
