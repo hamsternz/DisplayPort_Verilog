@@ -8,7 +8,9 @@ others to improve on this.
 
 This early version support a single lane (2.7Gb/s) and displays a
 white 800x600 screen, can scale to support four lanes and 4k 
-resolutions.
+resolutions. 
+
+EXPECT WORKING  720P (1-LANE) AND 1080P (TWO-LANE) REALLY SOON.
 
 My own test board is a Digilent Inc Nexys Video, using an Xilinx
 Artix 7 FPGA. However the most of the hardware specific parts are
