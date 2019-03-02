@@ -119,7 +119,7 @@ initial begin
     H_sync_width         = 12'h080;  // 128
     V_sync_width         = 12'h004;  // 4
     H_start              = 12'h0D8;  // 216 
-    V_start              = 12'h01b;  // 37
+    V_start              = 12'h01b;  // 27
     H_vsync_active_high  = 1'b0;
     V_vsync_active_high  = 1'b0;
     flag_sync_clock      = 1'b1;
