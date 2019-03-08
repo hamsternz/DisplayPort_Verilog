@@ -7,9 +7,9 @@ DisplayPort is quite a complex protocol. This is a minimal Verilog
 implementation in the Verilog language. Hopefully this will inspire
 others to improve on this.
 
-This has now been tested using one or two lanes, and 800x600, 720p
+This has now been tested using one or two lanes, and 800x600, 720p and
 1080p resolutions, but should work with four lanes and 4k resolutions
-too.
+too. YCC and 442 video support should be simple to add too.
 
 Status
 ======
