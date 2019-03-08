@@ -64,6 +64,11 @@ reg        tx_symbol_clk;
 reg        tx_align_train;       
 reg        tx_clock_train;       
 reg        tx_link_established;
+reg f;
+
+wire [72:0] msa_merged_data;
+wire        test_signal_ready;
+wire  [2:0] stream_channel_count;
 
 initial begin
   tx_symbol_clk       = 1'b0;
@@ -75,14 +80,20 @@ end
 always begin
   #4    // Should be 135MHz, but 125 is close enough for simulation
   tx_symbol_clk = ~tx_symbol_clk;
+  #4    // Should be 135MHz, but 125 is close enough for simulation
+  tx_symbol_clk = ~tx_symbol_clk;
+  $display("%b %b", 
+         msa_merged_data[8:0],  msa_merged_data[26:18]
+  );
+
+  $display("%b %b", 
+         msa_merged_data[17:9], msa_merged_data[35:27]
+  );
 end
 
 ///////////////////////////////////////////////////
 // Video pipeline
-///////////////////////////////////////////////////
-wire [72:0] msa_merged_data;
-wire        test_signal_ready;
-wire  [2:0] stream_channel_count;
+/////////////////////////////////////////%/////////
 test_source i_test_source(
         .clk                  (tx_symbol_clk),
         .stream_channel_count (stream_channel_count),

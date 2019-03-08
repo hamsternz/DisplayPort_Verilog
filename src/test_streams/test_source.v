@@ -12,6 +12,7 @@
 // Version |  Notes
 // ----------------------------------------------------------------------------
 //   1.0   | Initial Release
+//   1.1   | Testing 720p and 1080p
 //
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -98,7 +99,11 @@ always @(*) begin
 end
 
 //test_source_800_600_RGB_444_colourbar i_test_source(
-test_source_720p_RGB_444_colourbar i_test_source(
+//test_source_1080p_RGB_444_gutted i_test_source(
+//test_source_720p_RGB_444_colourbar i_test_source(
+//test_source_800_600_RGB_444_ch2 i_test_source(
+//test_source_1080p_RGB_444_colourbar i_test_source(
+test_source_1080p_RGB_444_colourbar i_test_source(
             .M_value              (M_value),
             .N_value              (N_value),
             
@@ -130,7 +135,7 @@ test_source_720p_RGB_444_colourbar i_test_source(
 
 insert_main_stream_attrbutes_one_channel i_insert_main_stream_attrbutes_one_channel(
             .clk                  (clk),
-            .active               (1'b1),
+            .active                  (1'b1),
             //////////////////////////////////////////////////////
             // The MSA values (some are range reduced and could 
             // be 16 bits ins size)
