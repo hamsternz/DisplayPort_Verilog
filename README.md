@@ -7,9 +7,9 @@ DisplayPort is quite a complex protocol. This is a minimal Verilog
 implementation in the Verilog language. Hopefully this will inspire
 others to improve on this.
 
-This has now been tested using one or two lanes, and 800x600, 720p and
-1080p resolutions, but should work with four lanes and 4k resolutions
-too. YCC and 442 video support should be simple to add too.
+This has now been tested using one or two lanes, and 800x600, 720p, 
+1080p and 2160p resolutions, but should work with four lanes too.
+YCC and 442 video are supported.
 
 Status
 ======
@@ -43,11 +43,12 @@ Tested resolutions
 
     Resolution | Lanes | Colour Mode | Effective Pixel clock rate
     -----------+-------+-------------+--------------
-    800x600    |   1   | RGB 444     | 40 MHz
-    800x600    |   2   | RGB 444     | 40 MHz
-    800x600    |   3   | RGB 444     | 40 MHz
-    1280x720   |   1   | RGB 444     | 74.25 MHz
-    1920x1080  |   2   | RGB 444     | 148.5 MHz
+    800x600    |   1   | RGB 444     |  40.00 MHz
+    800x600    |   2   | RGB 444     |  40.00 MHz
+    800x600    |   3   | RGB 444     |  40.00 MHz
+    1280x720   |   1   | RGB 444     |  74.25 MHz
+    1920x1080  |   2   | RGB 444     | 148.50 MHz
+    3240x2160  |   2   | YCC 422     | 165.00 MHz
 
 There are in the src/test_streams directory. To change patterns, edit
 src/test_stream.v, switch the module name, and rebuild the file
