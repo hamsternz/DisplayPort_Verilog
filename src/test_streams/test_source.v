@@ -103,7 +103,8 @@ end
 //test_source_720p_RGB_444_colourbar i_test_source(
 //test_source_800_600_RGB_444_ch2 i_test_source(
 //test_source_1080p_RGB_444_colourbar i_test_source(
-test_source_1080p_RGB_444_colourbar i_test_source(
+//test_source_1080p_RGB_444_colourbar i_test_source(
+test_source_3840_2180_YCC_422_ch2 i_test_source(
             .M_value              (M_value),
             .N_value              (N_value),
             

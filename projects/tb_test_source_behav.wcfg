@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_data_stream_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_data_stream" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="862196000000fs"></ZoomStartTime>
+      <ZoomEndTime time="862983000001fs"></ZoomEndTime>
+      <Cursor1Time time="862284000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="178"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="array" fp_name="/tb_data_stream/i_test_source/i_test_source/data">
+      <obj_property name="ElementShortName">data[72:0]</obj_property>
+      <obj_property name="ObjectShortName">data[72:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_data_stream/i_test_source/i_test_source/row_count">
+      <obj_property name="ElementShortName">row_count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">row_count[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_data_stream/i_test_source/i_test_source/line_count">
+      <obj_property name="ElementShortName">line_count[10:0]</obj_property>
+      <obj_property name="ObjectShortName">line_count[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_data_stream/i_test_source/i_test_source/index">
+      <obj_property name="ElementShortName">index[7:0]</obj_property>
+      <obj_property name="ObjectShortName">index[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_data_stream/i_test_source/i_test_source/pixel_count">
+      <obj_property name="ElementShortName">pixel_count[18:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_count[18:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
